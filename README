@@ -17,3 +17,17 @@ PUT	    /productos/editar/{id}	               Actualiza nombre, precio y stock d
 PATCH	/productos/updateNombre/{id}	       Actualiza solo el nombre de un producto
 DELETE	/productos/eliminar/{id}/{sucursalId}  Elimina un producto de una sucursal
 GET	    /productos/maxStock/{franquiciaId}	   Producto con más stock por cada sucursal de una franquicia
+
+Despliegue en entorno local
+
+1. java -version     17 o superior
+   mysql --version   8 o superior
+
+2. clonar el repositorio
+    git clone https://github.com/adolfovj/franquicias.git
+    cd franquicias
+
+3. Con MySQL en ejecución, desde MySQL Workbench o la consola:
+   sql
+   CREATE DATABASE franquicias;
+   Solo se crea la base vacía. Las tablas se generan automáticamente al iniciar la aplicación.
