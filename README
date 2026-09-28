@@ -1,0 +1,19 @@
+Endpoints
+Franquicias
+Método	Ruta	Descripción
+POST	/franquicia/crear	           Crea una franquicia
+GET	    /franquicia/obtener	           Lista todas las franquicias
+PATCH	/franquicia/updateNombre/{id}  Actualiza el nombre de una franquicia
+
+Sucursales
+Método	Ruta	Descripción
+POST	/sucursales/crear/{franquiciaId}	Crea una sucursal dentro de una franquicia
+PATCH	/sucursales/updateNombre/{id}	    Actualiza el nombre de una sucursal
+
+Productos
+Método	Ruta	Descripción
+POST	/productos/crear/{sucursalId}	       Crea un producto dentro de una sucursal
+PUT	    /productos/editar/{id}	               Actualiza nombre, precio y stock de un producto
+PATCH	/productos/updateNombre/{id}	       Actualiza solo el nombre de un producto
+DELETE	/productos/eliminar/{id}/{sucursalId}  Elimina un producto de una sucursal
+GET	    /productos/maxStock/{franquiciaId}	   Producto con más stock por cada sucursal de una franquicia
